@@ -1,0 +1,207 @@
+(footprint "490107670412_DEBUGGING"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "<b>WR-WST REDFIT IDC SKEDD<br></b><br>Only use for debugging or programming application.<br>For mechanical stressed application please use the PCB layout for permanent application.")
+	(property "Reference" "REF**"
+		(at 9.88 -1.808 0)
+		(layer "F.SilkS")
+		(uuid "42460ba0-b890-4293-9f9a-9078e5e1cf2e")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "490107670412_DEBUGGING"
+		(at 18.416 0.692 0)
+		(layer "F.Fab")
+		(uuid "2aa1a226-e4ea-4d72-8da3-075d412c0a77")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "81d819c2-0277-4b5c-a126-a32af7f76ba3")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0ed08634-dae6-44a4-ab6e-b1461c37f6e1")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0adc291f-e90f-4e4e-8340-787571c90c1b")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_circle
+		(center 3.2 -2.2)
+		(end 3.3 -2.2)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "89db8ba1-d82f-4ad3-8f3a-127149ebb407")
+	)
+	(fp_line
+		(start -5.9 -2.9)
+		(end 5.9 -2.9)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "f5c5b52d-5b52-4fea-a580-41962ea91fe0")
+	)
+	(fp_line
+		(start -5.9 2.9)
+		(end -5.9 -2.9)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "57232f6c-4148-4df0-8c88-454e26a61a15")
+	)
+	(fp_line
+		(start 5.9 -2.9)
+		(end 5.9 2.9)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "0093b044-23a8-4f7e-b3e5-e70dd1366586")
+	)
+	(fp_line
+		(start 5.9 2.9)
+		(end -5.9 2.9)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "c9f5e313-ab1b-47f7-adfb-f620e3b5c82c")
+	)
+	(fp_line
+		(start -6.335 -2.8)
+		(end 6.335 -2.8)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "fc30767f-2721-4b48-b862-3a0adf0f58ff")
+	)
+	(fp_line
+		(start -6.335 2.8)
+		(end -6.335 -2.8)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "f19667aa-dea8-4232-b22d-be1fa804776f")
+	)
+	(fp_line
+		(start 6.335 -2.8)
+		(end 6.335 2.8)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "b82d065d-81ca-4c5a-a6fc-e54b2378d338")
+	)
+	(fp_line
+		(start 6.335 2.8)
+		(end -6.335 2.8)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "924bd045-9081-460f-8d2f-6938eeed2134")
+	)
+	(pad "" np_thru_hole circle
+		(at -3.135 -1.27)
+		(size 2.2 2.2)
+		(drill 2.2)
+		(layers "*.Cu" "*.Mask")
+		(uuid "45fc8e89-7979-40f3-ac1e-a0eb7398ea2a")
+	)
+	(pad "" np_thru_hole circle
+		(at 3.135 1.27)
+		(size 2.6 2.6)
+		(drill 2.6)
+		(layers "*.Cu" "*.Mask")
+		(uuid "2f456cf8-1405-44f4-bac2-3f3a01f3d160")
+	)
+	(pad "1" thru_hole circle
+		(at 1.905 -1.27)
+		(size 1.932 1.932)
+		(drill 1.5)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.102)
+		(uuid "beaa9b75-c230-4ad6-a611-d322c2486cc7")
+	)
+	(pad "2" thru_hole circle
+		(at 0.635 1.27)
+		(size 1.932 1.932)
+		(drill 1.5)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.102)
+		(uuid "8f26ddb6-9202-42a0-a068-fb12907e0e69")
+	)
+	(pad "3" thru_hole circle
+		(at -0.635 -1.27)
+		(size 1.932 1.932)
+		(drill 1.5)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.102)
+		(uuid "db75f46b-d87e-4c7a-88c2-62deae023e38")
+	)
+	(pad "4" thru_hole circle
+		(at -1.905 1.27)
+		(size 1.932 1.932)
+		(drill 1.5)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.102)
+		(uuid "17ea60c9-8d52-43cb-aaba-d13d997304e3")
+	)
+)

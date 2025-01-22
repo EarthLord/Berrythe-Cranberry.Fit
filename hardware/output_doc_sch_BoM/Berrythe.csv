@@ -1,0 +1,29 @@
+No,Reference,Value,Footprint,Qty,DNP,PN
+1,BT1,Battery_Cell,Berrythe-footprints:JST_PH_S2B-PH-K_1x02_P2.00mm_Horizontal,1,,S2B-PH-K-S
+2,"C1,C2,C4,C6",10u,Berrythe-footprints:C_0805_2012Metric,4,,CL21A106KOQNNNE
+3,"C3,C5,C7,C9,C10,C14",100n,Berrythe-footprints:C_0402_1005Metric,6,,CL05B104KO5NNND
+4,"C8,C11,C12,C13",10n,Berrythe-footprints:C_0402_1005Metric,4,,CL05B103KO5NNNC
+5,D1,Green LED,Berrythe-footprints:LED_0603_1608Metric,1,,QBLP601-YG1-2943
+6,D2,Red LED,Berrythe-footprints:LED_0603_1608Metric,1,,SML-D12U1WT86
+7,"D3,D4,D5,D6,D7,D8",Warm LED,Berrythe-footprints:LED_PLCC_2835,6,,JB2835BWT-N-U35EA0000-N000P001
+8,"D9,D10",RGB LED,Berrythe-footprints:LED_RGB_5050-6,2,,QLSP08RGB_B
+9,D11,D5V0S1U2LP,Berrythe-footprints:D_SOD-882D,1,,D5V0S1U2LP-7B
+10,J1,USB_C_Receptacle_PowerOnly_6P,Berrythe-footprints:AMPHENOL_10164359-00011LF,1,,10164359-00011LF
+11,J2,TactileSw Conn,Berrythe-footprints:Molex_Pico-Clasp_501331-0207_1x02-1MP_P1.00mm_Vertical,1,,530470210
+12,J3,TactileSw Conn,Berrythe-footprints:Molex_PicoBlade_53047-0210_1x02_P1.25mm_Vertical,1,,5013310207
+13,"Q1,Q2,Q3",DMN2024U,Berrythe-footprints:SOT-23,3,,DMN2024U-7
+14,R1,0E,Berrythe-footprints:R_1206_3216Metric,1,,RC1206JR-130RL
+15,"R2,R6,R8,R9,R14,R15,R28,R29",2k,Berrythe-footprints:R_0402_1005Metric,8,,RC0402FR-072KL
+16,R3,330E,Berrythe-footprints:R_0402_1005Metric,1,,RC0402FR-07330RL
+17,"R4,R5",5M1,Berrythe-footprints:R_0402_1005Metric,2,,RC0402FR-075M1L
+18,"R10,R11,R12,R35",5k1,Berrythe-footprints:R_0402_1005Metric,4,,RC0402FR-075K1L
+19,"R13,R26,R30,R31,R34",47k,Berrythe-footprints:R_0402_1005Metric,5,,RC0402FR-0747KL
+20,"R16,R17,R18,R19,R20,R21,R38,R39",24E,Berrythe-footprints:R_0805_2012Metric,8,,RK73H2ATTD24R0F
+21,"R22,R23,R24,R27,R32,R33",10E,Berrythe-footprints:R_0402_1005Metric,6,,RC0402FR-0710RL
+22,R37,0E,Berrythe-footprints:R_0402_1005Metric,1,,RC0402JR-070RL
+23,SW1,SW_Vibr,Berrythe-footprints:SW-18010P,1,,1766
+24,U1,BQ29737,Berrythe-footprints:WSON-6_1.5x1.5mm_P0.5mm,1,,BQ29737DSER
+25,U2,TP4056,Berrythe-footprints:SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.3mm,1,,TPB4056B2X-ES1R
+26,U3,LP5810D,Berrythe-footprints:WSON8-LP5810,1,,LP5810DDSDR
+27,U4,MSPS003FxSPW20R,Berrythe-footprints:TSSOP-20_4.4x6.5mm_P0.65mm,1,,MSPS003F4SPW20R
+28,U5,"TCR2LF33,LM(CT",Package_TO_SOT_SMD:SOT-23-5,1,,"TCR2LF33,LM(CT"
