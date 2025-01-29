@@ -1,3 +1,31 @@
+/*
+ * Copyright (c) 2025, Cranberry Fit (Empower Digital Health Pvt Ltd)
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ * 1. Redistributions of source code must retain the above copyright notice, this
+ *    list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright notice,
+ *    this list of conditions and the following disclaimer in the documentation
+ *    and/or other materials provided with the distribution.
+ * 3. Neither the name of the copyright holder nor the names of its
+ *    contributors may be used to endorse or promote products derived from
+ *    this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+ * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
 #include "lp5810.h"
 #include "src/tfp_printf.h"
 #include "ti_msp_dl_config.h"
@@ -38,7 +66,7 @@ static const uint8_t lp5810_dev_config_3to5[] =
     0x00,   //Config 3 - Leave in manual mode for LED 0, 1, 2
 #endif
     0x00,   //Config 4 - Reserved
-    0x07,   //Config 5 - Enable exponential brightness curve for LED 0, 1, 2
+    0x00,   //Config 5 - Disable exponential brightness curve for LED 0, 1, 2
     //Config 7 - All PWM phases are forward aligned
     //Config 11 - VSync is set to input and blank time is 1us
 };
@@ -508,7 +536,7 @@ void lp5810_init_sw_workaround(void)
     i2c_write(LP5810_I2C_BROADCAST_ADDRESS, tx_buffer, sizeof(tx_buffer));
 }
 
-void lp5810_start_478_sequence(void)
+void lp5810_start_sequence(void)
 {
     //Turn on the LP5810 IC
     lp5810_set_chip_en(true);
