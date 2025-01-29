@@ -2,9 +2,9 @@
 
 ## Objective
 
-Create a low-cost alternative for a breathing assistant toy in India by replacing the circuitry of a night light toy. The working is similar the toy in the picture below, not available in India (Amazon US [shopping link 1](https://a.co/d/hcPQM95), [shopping link 2](https://a.co/d/2bBX1N4)) below.
+Create a low-cost alternative for a breathing assistant toy in India by replacing the circuitry of a night light toy. The working is similar these toys in these Amazon US [shopping link 1](https://a.co/d/hcPQM95), [shopping link 2](https://a.co/d/2bBX1N4). Below is a video of the resulting breathing sequence from a retrofit night light toy.
 
-![image.png](readme-media/breathing_toys.png)
+<video src='readme-media/4-7-8_sequence.mp4' width=388/>
 
 This open-source project is done for [Cranberry.fit](https://cranberry.fit), a company developing personalized care products to improve menstrual health.
 
