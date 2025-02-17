@@ -14,7 +14,7 @@ This open-source project is done for [Cranberry.fit](https://cranberry.fit), a c
 
 ## Repository Content
 
-This repository contains both the hardware and firmware for Berrythe - KiCad PCB design and TI Code Composer Studio Project.
+This repository contains both the hardware and firmware for Berrythe - KiCad PCB design and TI Code Composer Studio Project. The respective hardware and firmware folders contain their documentation as well.
 
 ## Specifications of toy
 
