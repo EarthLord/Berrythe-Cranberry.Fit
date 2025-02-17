@@ -26,6 +26,29 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+ /*
+ digraph G {
+    nodesep=0.6
+    "Mode specific\ninitialization" [shape="box"]
+    "Set periodic\ntimer callback" [shape="box"]
+    "Enter mode" -> "Mode specific\ninitialization"
+    "Mode specific\ninitialization" -> "Set periodic\ntimer callback"
+    "Set periodic\ntimer callback" -> Sleep
+    "Is button\npressed" [shape="diamond"]
+    "Is\nVbat<3.5V" [shape="diamond"]
+    "Is mode\ntimed out" [shape="diamond"]
+    "Mode specific\nprocess" [shape="box"]
+    "Is button\npressed" -> "Start next\nmode" [label=" YES"]
+    "Is\nVbat<3.5V" ->  "Go to low\nbattery mode" [label=" YES"]
+    "Is mode\ntimed out" -> "Go to\nOFF mode" [label=" YES"]
+    "Periodic timer\ncallback" -> "Is button\npressed"
+    "Is button\npressed" -> "Is\nVbat<3.5V" [label=" NO"]
+    "Is\nVbat<3.5V" ->  "Is mode\ntimed out" [label=" NO"]
+    "Is mode\ntimed out" -> "Mode specific\nprocess"
+    "Mode specific\nprocess" -> Sleep
+}
+ */
+
 #include "breathe_mode.h"
 #include "off_mode.h"
 #include "periodic_timer.h"
