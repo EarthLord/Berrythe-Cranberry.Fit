@@ -1,9 +1,19 @@
 # Berrythe firmware documentation
 
 The overarching requirement from the firmware is specified by the state machine below.
-
-![Complete state machine of Berrythe](../readme-media/fw_state_machine.png)
-
+```mermaid
+stateDiagram
+  direction LR
+  [*] --> BREATH:Boot
+  OFF --> [*]:Button press<br>to reboot
+  BREATH --> NIGHT:Button press
+  BREATH --> OFF:10 min
+  NIGHT --> OFF:30 min
+  NIGHT --> OFF:Button press
+  LOW_BATTERY --> OFF:Red LED<br>indication
+  NIGHT --> LOW_BATTERY: Vbat<3.5V
+  BREATH --> LOW_BATTERY: Vbat<3.5V
+```
 ## Challenges
 
 ### Code memory size
@@ -33,8 +43,23 @@ Alternatives considered were the [mpaland's printf fork maintained by eyalroz](h
 
 ## BREATHE and NIGHT mode
 The general flow of these two modes are as shown below.
-![Breathe and night mode flow chart](../readme-media/mode_flow_chart.png)
-
+```mermaid
+flowchart TD
+    enter(["Enter mode"]) ---> init["Mode specific<br>initialization"]
+    init ---> timer["Set periodic<br>timer callback"]
+    timer ---> sleep(["Sleep"])
+    tim_cb(["Periodic timer<br>callback<br>Every millisecond"]) --> btn["Is button<br>pressed"]
+    btn@{ shape: diam}
+    btn --> |YES|next(["Start next<br>mode"])
+    btn --> |NO|bat["Is<br>Bvat<3.5V"]
+    bat@{ shape: diam}
+    bat --> |YES|low(["Go to low<br>battery mode"])
+    bat --> |NO|time["Is mode<br>timed out"]
+    time@{ shape: diam}
+    time --> |YES|off(["Go to low<br>OFF mode"])
+    time --> |NO|mode["Mode specific<br>process"]
+    mode --> sleep
+```
 Since in these modes the main power consumption is from the LEDs, there is less focus on optimizing the power consumption due to the MCU. The periodic timer callback wakes the MCU every millisecond. 
 
 ### BREATHE mode
@@ -71,6 +96,21 @@ In all modes except OFF mode, the MCU operates in SLEEP mode, where only the pro
 Before initiating STANDBY1 low power state in the OFF mode, LP5810 is disabled and the MOSFET driving the night lights is turned off to remove their power consumption.
 
 On waking up from OFF mode, the MCU does a software reset to start afresh in the BREATHE mode. This makes the firmware development easier since each mode's states don't have to be maintained across as they can be run at most once.
+
+## Button sensing
+To have better user experience, it was decided to only have user's perform a single press and not have any significance for double, triple or long press. For both debouncing and filtering out unintentional taps, the button press needed to be in the form of the below pattern. 
+
+```mermaid
+---
+config:
+  theme: neo
+---
+timeline
+    At least 25 ms : Released
+    At least 25 ms : Pressed
+    At least 25 ms : Released
+    100 ms : Valid button press
+```
 
 ## Battery and charging check for low power mode
 Voltage dividers are used to measure the battery voltage and the USB input voltage by the ADC of the MCU.  The different modes for the battery are computed as per the below table.
