@@ -41,8 +41,16 @@ This repository contains both the hardware and firmware for Berrythe - KiCad PCB
 4. The night light mode will be on for a time of 30 minutes, following which it’ll power down.
 5. The following will be the flow of operation of the toy
 
-![image.png](readme-media/state_machine.png)
-
+```mermaid
+stateDiagram
+  direction LR
+  [*] --> OFF
+  OFF --> BREATH:1-press
+  BREATH --> NIGHT:1-press
+  BREATH --> OFF:10 min
+  NIGHT --> OFF:30 min
+  NIGHT --> OFF:1-press
+```
 6. The breathing mode timing would be as follows to provide an overall 4, 7, 8 breathing exercise. The green and blue color intensity would change as shown below, visually changing linearly. 
 
 ![image.png](readme-media/Color_transitions.png)
