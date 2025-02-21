@@ -33,25 +33,6 @@
  *  All rights reserved.
  */
 
- /*
- digraph G {
-    rankdir = LR
-    nodesep=0.6
-    "POWER-ON" [shape="plaintext"]
-    root [shape="point"]
-    "POWER-ON" -> root
-    root -> BREATH [side=R label="Restart"]
-    OFF -> root [label="Button\npress"]
-    NIGHT -> OFF [label="Button\npress"]
-    NIGHT -> OFF [label="30 min"]
-    BREATH -> NIGHT [label="Button\npress"]
-    BREATH -> OFF [label="10 min"]
-    BREATH -> "LOW\nBATTERY" [label="Vbat < 3.5V"]
-    NIGHT -> "LOW\nBATTERY" [label="Vbat < 3.5V"]
-    "LOW\nBATTERY" -> OFF [label="Red LED\nindication"]
-}
- */
-
 #include "ti/driverlib/dl_common.h"
 #include "ti_msp_dl_config.h"
 #include "tfp_printf.h"
