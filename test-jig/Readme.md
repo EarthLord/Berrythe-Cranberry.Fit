@@ -1,23 +1,30 @@
 ```mermaid
+---
+config:
+  themeCSS: |
+    #edge4, #edge6, #edge7, #edge8 { stroke: red; stroke-width: 2px; }
+    #edge9 { stroke: green ; stroke-width: 2px;  stroke-dasharray="10,5"; }
+---
 stateDiagram
   direction LR
   idR --> XDS110:USB
   XDS110 --> Berrythe:SWD,UART
   idR --> Berrythe:Button GPIO
-  idR --> idC:I2C
-  idAC --> idP1:AC mains
-  idAC --> idP2:AC mains
-  idR --> Relay:GPIO
+  idC --> idR:I2C
+  idAC --> idP1:240V AC
+  idR --> MOSFET:GPIO
   idP1 --> idR:5V
-  idP2 --> Relay:5V
-  Relay --> Berrythe:5V USB
+  idP1 --> MOSFET:5V
+  MOSFET --> Berrythe:5V USB
   Berrythe --> idC:LED light
-  idC:Color sensor
-  idAC:AC Strip
-  idP1:5V Adapter 3A
-  idP2:5V Adapter 1A
-  Berrythe:Device Under Test
-  Berrythe:Berrythe
   idR:R-Pi 3B+
   idR:Capacitive Screen
+  Berrythe:Device Under Test
+  Berrythe:Berrythe
+  idC:Color sensor
+  idAC:AC mains
+  idP1:5V Adapter 7A
+  
+
+
 ```
